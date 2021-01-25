@@ -1,0 +1,11 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{if .IsHome}}{{.Site.Title}}{{else}}{{.Title}} | {{.Site.Title}}{{end}}</title>
+	<!-- Bootstrap cdn -->
+	<link rel="stylesheet" href="{{`css/bootstrap.min.css` | absURL}}">
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="{{`css/fa-all.css` | absURL}}">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{`css/style.css` | absURL}}">
+</head>

@@ -1,0 +1,97 @@
+{{define "main"}}
+	<div id="main-intro" class="p-5">
+		<div class="row">
+			<div class="col-lg-7">
+				<h1 class="font-weight-bold text-dark">{{.Site.Title}}</h1>
+				{{with .Site.Params.Designation}}
+				<p class="lead">{{.}}</p>
+				{{end}}
+				{{with .Site.Params.About}}
+				<p class="text-secondary">{{.}}</p>
+				{{end}}
+				<p>
+					<a href="{{.Site.BaseURL}}/portfolio/" class="btn btn-info mr-1">View Portfolio <i class="fas fa-chevron-circle-right"></i></a>
+					<a href="{{.Site.BaseURL}}/resume/" class="btn btn-dark">View Resume <i class="fas fa-chevron-circle-right"></i></a>
+				</p>
+			</div>
+			<!-- /.col-lg-7 -->
+			<div class="col-lg-5">
+				<img class="w-100 rounded-lg shadow" src="{{`images/avinash-rectangle.jpg` | absURL}}" alt="Avinash Murmu">
+			</div>
+			<!-- /.col-lg-5 -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.px-lg-5 /.py-4 -->
+	<div id="what-i-do" class="mb-5 bg-white border shadow-sm pt-5 px-5 pb-2">
+		<h4 class="font-weight-bold border-left border-info pl-3 mb-4">What I Do</h4>
+		<p class="text-secondary m-0">I have more than 10 years' experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my <a href="{{.Site.BaseURL}}/resume/" class="text-info">online resume</a> and <a href="{{.Site.BaseURL}}/portfolio/" class="text-info">project portfolio</a>.</p>
+
+		<div class="row pt-5">
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2" style="color: #333;"><i class="fab fa-js fa-2x"></i></p>
+				<h6 class="font-weight-bold">Vanilla Javascript</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2">
+					<i class="fab fa-angular fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-react fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-vuejs fa-2x" style="color: #333;"></i>
+				</p>
+				<h6 class="font-weight-bold">Angular, React &amp; Vue</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2" style="color: #333;"><i class="fab fa-node-js fa-2x"></i></p>
+				<h6 class="font-weight-bold">Node.js</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2" style="color: #333;"><i class="fab fa-python fa-2x"></i></p>
+				<h6 class="font-weight-bold">Python &amp; Django</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2" style="color: #333;"><i class="fab fa-php fa-2x"></i></p>
+				<h6 class="font-weight-bold">PHP</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2">
+					<i class="fab fa-npm fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-gulp fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-grunt fa-2x" style="color: #333;"></i>
+				</p>
+				<h6 class="font-weight-bold">npm, Gulp &amp; Grunt</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2">
+					<i class="fab fa-html5 fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-css3-alt fa-2x" style="color: #333;"></i>
+				</p>
+				<h6 class="font-weight-bold">HTML &amp; CSS</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+			<div class="col-lg-3 mb-4">
+				<p class="mb-2">
+					<i class="fab fa-sass fa-2x mr-1" style="color: #333;"></i>
+					<i class="fab fa-less fa-2x" style="color: #333;"></i>
+				</p>
+				<h6 class="font-weight-bold">Sass &amp; LESS</h6>
+				<p class="text-secondary small">List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+			<!-- .col-lg-3 -->
+		</div>
+		<!-- .row - programming languages -->
+	</div>
+	<!-- #what-i-do -->
+{{end}}

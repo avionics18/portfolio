@@ -1,0 +1,56 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Avinash Murmu"
+
+[taxonomies]
+	category = "categories"
+
+[menu]
+	[[menu.main]]
+		identifier = "about-me"
+		name = "About Me"
+		pre = "fas fa-user"
+		url = "/"
+		weight = 1
+	[[menu.main]]
+		identifier = "portfolio"
+		name = "Portfolio"
+		pre = "fas fa-laptop-code"
+		url = "/portfolio/"
+		weight = 2
+	[[menu.main]]
+		identifier = "services"
+		name = "Services"
+		pre = "fas fa-briefcase"
+		url = "/services/"
+		weight = 3
+	[[menu.main]]
+		identifier = "resume"
+		name = "Resume"
+		pre = "fas fa-file-invoice"
+		url = "/resume/"
+		weight = 4
+	[[menu.main]]
+		identifier = "blog"
+		name = "Blog"
+		pre = "fas fa-blog"
+		url = "/blog/"
+		weight = 5
+	[[menu.main]]
+		identifier = "contact"
+		name = "Contact"
+		pre = "fas fa-comment-dots"
+		url = "/contact/"
+		weight = 6
+
+[params]
+	designation = "Senior Software Engineer"
+	about = "I'm a software engineer specialised in frontend and backend developement for complex scalable web apps. I write about software developement on my blog. Want to know how I may help your project? Check out my project portfolio and online resume."
+
+	facebook = "https://www.facebook.com"
+	twitter = "https://www.twitter.com"
+	linkedin = "https://www.linkedin.com"
+	github = "https://www.github.com"
+	codepen = "https://www.codepen.io"
+
+

@@ -1,0 +1,14 @@
+{{define "main"}}
+<div class="p-5">
+	<h1 class="text-dark"><span class="font-weight-light">Category:</span> <b>{{.Title}}</b></h1>
+	<hr>
+	<div>
+		<div class="row">
+		{{ range .Data.Pages }}
+			<div class="col-lg-2 mb-2 font-weight-bold text-muted text-uppercase">{{.Date.Format "Jan 2, 2006"}}</div>
+			<div class="col-lg-10 mb-2"><a href="{{.Permalink}}">{{.Title}}</a></div>
+		{{ end }}
+		</div>
+	</div>
+</div>
+{{end}}

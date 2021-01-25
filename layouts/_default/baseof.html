@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	{{partial "head.html" .}}
+<body>
+	{{partial "header.html" .}}
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 vh-100 overflow-auto bg-info">
+				{{partial "sidebar.html" .}}
+			</div>
+			<!-- /.col-lg-4 -->
+			<div class="col-lg-9 vh-100 overflow-auto bg-light">
+				{{block "main" .}}{{end}}
+			</div>
+			<!-- /.col-lg-8 -->
+		</div>
+	<!-- /.row -->
+	</div>
+	<!-- /.container-fluid -->
+
+	{{partial "footer.html" .}}
+
+
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="{{`js/jquery.min.js` | absURL}}"></script>	
+	<script src="{{`js/bootstrap.bundle.min.js` | absURL}}"></script>	
+
+</body>
+</html>

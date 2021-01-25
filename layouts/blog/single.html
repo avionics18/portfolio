@@ -1,0 +1,54 @@
+{{define "main"}}
+	<div class="p-5">
+		<h1 class="display-4 bg-info text-light py-4 px-3">{{.Title}}</h1>
+		<!-- Content Row -->
+		<div class="form-row mt-lg-5">
+			<!-- content -->
+			<div class="col-lg-9 order-lg-1 order-2">
+				<div class="bg-white border-left border-info shadow-sm p-4 mb-4">
+					<p class="m-0"><span class="text-info text-uppercase font-weight-bold">Quick Summary <i class="fas fa-hand-point-right mr-1"></i></span> {{.Params.Description}}</p>
+				</div>
+				{{.Content}}
+			</div>
+			<!-- Details about the post -->
+			<div class="col-lg-3 order-lg-2 order-1">
+				<div class="bg-lighter shadow-sm text-info border-left border-info p-3 mb-3">
+					<!-- Authors -->
+					{{if .Params.Authors}}<p><i class="fas fa-user-circle mr-1"></i> {{ delimit .Params.Authors ", " }}</p>{{end}}
+					<!-- Date -->
+					{{if .Date}}<p><i class="fas fa-calendar-alt mr-1"></i> {{.Date.Format "Jan 2, 2006"}}</p>{{end}}
+					<!-- Categories with Links -->
+					{{ with .Params.Categories }}
+					<p>
+						<i class="fas fa-tags mr-1"></i>
+						{{range .}}
+							<a class="badge badge-info" href="{{ `categories/` | absURL }}{{ . | urlize }}">{{ . }}</a>
+						{{end}}
+					</p>
+					{{end}}
+				    <!-- Reading Time -->
+				    <p class="m-0"><i class="fas fa-stopwatch mr-1"></i> {{.ReadingTime}} min read</p>
+			    </div>
+			    <!-- Previous & Next Post Template -->
+			    {{ with .NextInSection }}
+			    <div class="card bg-lighter shadow-sm mb-3">
+			    	<div class="card-header text-secondary text-uppercase small font-weight-bold"><i class="fas fa-angle-double-left"></i> Prev</div>
+			    	<div class="card-body p-3">
+			    		  <a class="text-info" href="{{.Permalink}}"> {{.Title}}</a>
+			    	</div>
+			    </div>
+	    		{{ end }}
+	    		{{ with .PrevInSection }}
+			    <div class="card bg-lighter shadow-sm mb-3">
+			    	<div class="card-header text-secondary text-uppercase small font-weight-bold">Next <i class="fas fa-angle-double-right"></i></div>
+			    	<div class="card-body p-3">
+			    		  <a class="text-info" href="{{.Permalink}}"> {{.Title}}</a>
+			    	</div>
+			    </div>
+	    		{{ end }}
+			    <!-- Previous & Next Post Template -->
+			</div>
+		</div>
+		<!-- Content Row -->
+	</div>
+{{end}}

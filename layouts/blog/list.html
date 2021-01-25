@@ -1,0 +1,29 @@
+{{define "main"}}
+	<div class="p-5">
+		<h1 class="font-weight-bold text-dark">{{.Title}}</h1>
+		<hr>
+		<!-- Posts Row -->
+		<div class="row pt-4">
+			{{range .Pages}}
+				<div class="col-6 mb-3">
+					<div class="card border-0 rounded-lg shadow-sm">
+						<div class="card-body">
+							<h5><a href="{{.Permalink}}" class="font-weight-semibold text-info text-capitalize text-decoration-none">{{.Title}}</a></h5>
+							<p class="small text-secondary border-bottom border-top py-2 mt-4">
+								{{if .Params.Authors}}<span class="mr-2"><i class="fas fa-user-circle"></i> {{ delimit .Params.Authors ", " }}</span>{{end}}
+								{{if .Date}}<span class="mr-2"><i class="fas fa-calendar-alt"></i> {{.Date.Format "Jan 2, 2006"}}</span>{{end}}
+								{{if .Params.Categories}}<span><i class="fas fa-tags"></i> {{ delimit .Params.Categories ", " }}</span>{{end}}
+							</p>
+							{{with .Params.Description}}<p class="small text-secondary">{{. | truncate 200}}</p>{{end}}
+							<a href="{{.Permalink}}" class="btn btn-info btn-sm">Read More <i class="fas fa-chevron-circle-right"></i></a>
+						</div>
+					</div>
+					<!-- .card -->
+				</div>
+				<!-- .col-6 .mb-3 -->
+			{{end}}
+		</div>
+		<!-- Posts Row -->
+
+	</div>	<!-- .p-5 -->
+{{end}}
