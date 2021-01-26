@@ -10,11 +10,21 @@
 
 
 /*Sidebar*/
+#sidebar-wrapper{
+	height: 100vh;
+	overflow: auto;
+}
+#sidebar-toggler{
+	display: none;
+}
 #social-icons > a{
 	margin-right: 6px;
 }
 #social-icons > a:last-Child{
 	margin-right: 0;
+}
+#main-sidebar .logo{
+	width: 150px;
 }
 #main-sidebar .list-group .list-group-item-action{
 	color: var(--light);
@@ -35,3 +45,60 @@
 	padding-left: 30px;
 }
 
+/* Content */
+#content-wrapper{
+	height: 100vh;
+	overflow: auto;
+}
+#content-wrapper .post-title{
+	font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+
+
+/* Mobile Devices */
+@media (max-width: 991.98px){
+	/*Sidebar*/
+	#sidebar-wrapper{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1500;
+		animation: slideIn 0.25s;
+	}
+	#sidebar-toggler{
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2000;
+	}
+	#main-sidebar .logo{
+		width: 100px;
+	}
+	/*Content*/
+	#content-wrapper{
+		height: initial;
+		overflow: initial;
+	}
+	#content-wrapper .post-title{
+		font-size: 2rem;
+		font-weight: 500;
+	}
+}
+
+/* Animation Classes */
+@keyframes slideIn{
+	from{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
