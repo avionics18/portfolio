@@ -8,12 +8,26 @@
 				<div class="col-6 mb-3">
 					<div class="card border-0 rounded-lg shadow-sm">
 						<div class="card-body">
+							<!-- Title -->
 							<h5><a href="{{.Permalink}}" class="font-weight-semibold text-info text-capitalize text-decoration-none">{{.Title}}</a></h5>
 							<p class="small text-secondary border-bottom border-top py-2 mt-4">
+								<!-- Authors -->
 								{{if .Params.Authors}}<span class="mr-2"><i class="fas fa-user-circle"></i> {{ delimit .Params.Authors ", " }}</span>{{end}}
+								<!-- Date -->
 								{{if .Date}}<span class="mr-2"><i class="fas fa-calendar-alt"></i> {{.Date.Format "Jan 2, 2006"}}</span>{{end}}
-								{{if .Params.Categories}}<span><i class="fas fa-tags"></i> {{ delimit .Params.Categories ", " }}</span>{{end}}
+								<!-- Categories -->
+								<span><i class="fas fa-tags mr-1"></i>
+								{{$arrayLength := len .Params.Categories}}
+								{{ range $elem_index, $elem_val := .Params.Categories }}
+								   {{ if eq $elem_index (sub $arrayLength 1) }}
+									   <a href="{{ `categories/` | absURL }}{{ $elem_val | urlize }}" class="text-secondary">{{$elem_val}}</a>
+								   {{else}}
+									   <a href="{{ `categories/` | absURL }}{{ $elem_val | urlize }}" class="text-secondary">{{$elem_val}}</a>, 
+								   {{end}}
+								{{ end }}
+								</span>
 							</p>
+							<!-- Description -->
 							{{with .Params.Description}}<p class="small text-secondary">{{. | truncate 200}}</p>{{end}}
 							<a href="{{.Permalink}}" class="btn btn-info btn-sm">Read More <i class="fas fa-chevron-circle-right"></i></a>
 						</div>

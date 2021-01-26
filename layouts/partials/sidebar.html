@@ -6,19 +6,19 @@
 	<p class="text-center text-light small">Hi! my name is {{.Site.Title}} and I'm a  software engineer. Welcome to my portfolio.</p>
 	<p class="text-center" id="social-icons">
 		{{with .Site.Params.Facebook}}
-		<a href="{{. | absURL}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-facebook"></i></a>
+		<a href="{{.}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-facebook"></i></a>
 		{{end}}
 		{{with .Site.Params.Twitter}}
-		<a href="{{. | absURL}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-twitter"></i></a>
+		<a href="{{.}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-twitter"></i></a>
 		{{end}}
 		{{with .Site.Params.Linkedin}}
-		<a href="{{. | absURL}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-linkedin"></i></a>
+		<a href="{{.}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-linkedin"></i></a>
 		{{end}}
 		{{with .Site.Params.Github}}
-		<a href="{{. | absURL}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-github"></i></a>
+		<a href="{{.}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-github"></i></a>
 		{{end}}
 		{{with .Site.Params.Codepen}}
-		<a href="{{. | absURL}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-codepen"></i></a>
+		<a href="{{.}}" class="btn btn-outline-light rounded-lg"><i class="fab fa-codepen"></i></a>
 		{{end}}
 	</p>
 	<!-- Main Navbar -->
