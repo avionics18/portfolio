@@ -4,9 +4,10 @@
 		<hr>
 		<!-- Posts Row -->
 		<div class="row pt-4">
-			{{range .Pages}}
+			{{ $paginator := .Paginate .Pages 2 }}
+			{{ range $paginator.Pages }}
 				<div class="col-lg-6 mb-3">
-					<div class="card border-0 rounded-lg shadow-sm">
+					<div class="card border-0 rounded-lg list-post-card">
 						<div class="card-body">
 							<!-- Title -->
 							<h5><a href="{{.Permalink}}" class="font-weight-semibold text-info text-capitalize text-decoration-none">{{.Title}}</a></h5>
@@ -38,6 +39,10 @@
 			{{end}}
 		</div>
 		<!-- Posts Row -->
+
+		<div class="mt-5">
+			{{ template "_internal/pagination.html" . }}
+		</div>
 
 	</div>	<!-- .p-5 -->
 {{end}}
