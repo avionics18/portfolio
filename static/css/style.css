@@ -23,26 +23,35 @@
 #social-icons > a:last-Child{
 	margin-right: 0;
 }
+#main-sidebar{
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
 #main-sidebar .logo{
-	width: 150px;
+	width: 120px;
 }
 #main-sidebar .list-group .list-group-item-action{
 	color: var(--light);
 }
 #main-sidebar .list-group .list-group-item-action.active{
-	color: var(--dark);
-	background-color: #1596aa;
+	color: #041b1f;
+	background-color: #68ebff;
 	font-weight: bold;
 	border-color: rgba(0,0,0,0.125);
-	padding-left: 30px !important;
+	padding-left: 20px !important;
+	border-radius: 8px;
 }
 #main-sidebar .list-group .list-group-item{
 	background-color: var(--info);
+	padding: 10px;
+	font-size: 0.9rem;
 	transition: 0.2s;
 }
 #main-sidebar .list-group .list-group-item:hover{
-	background-color: #1596aa;
-	padding-left: 30px;
+	color: #041b1f;
+	background-color: #68ebff;
+	padding-left: 20px;
+	border-radius: 8px;
 }
 
 /* Content */
