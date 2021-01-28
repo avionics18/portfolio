@@ -27,7 +27,9 @@
 					</p>
 					{{end}}
 				    <!-- Reading Time -->
-				    <p class="m-0"><i class="fas fa-stopwatch mr-1"></i> {{.ReadingTime}} min read</p>
+				    <p><i class="fas fa-stopwatch mr-1"></i> {{.ReadingTime}} min read</p>
+				    <!-- Comments Count -->
+				    <p class="m-0"><i class="fas fa-comments mr-1"></i> <a href="{{.URL}}#disqus_thread" class="text-info">Post a comment</a></p>
 			    </div>
 			    <!-- Previous & Next Post Template -->
 			    {{ with .NextInSection }}
@@ -77,5 +79,22 @@
 			</div>
 		</div>
 		<!-- Mobile Bottom Prev & Next -->
+
+		<!-- Disqus Comments -->
+		<div class="row border-top border-info mt-5 pt-4">
+			<div class="col-12">
+				<!-- disqus template -->
+				{{partial "disqus.html" .}}
+				<!-- disqus template -->
+			</div>
+		</div>
+		<!-- Disqus Comments -->
+
 	</div>
+	<!-- .p-5 -->
+
+
+
+	<!-- Disqus Count Comments Javascript -->
+	<script id="dsq-count-scr" src="//avinash-portfolio.disqus.com/count.js" async></script>
 {{end}}

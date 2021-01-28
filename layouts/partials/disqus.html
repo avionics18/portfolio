@@ -1,0 +1,16 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript">    
+    (function() {
+        // Don't ever inject Disqus on localhost--it creates unwanted
+        // discussions from 'localhost:1313' on your Disqus account...
+        if (window.location.hostname == "localhost")
+            return;
+        // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        var disqus_shortname = '{{ .Site.DisqusShortname }}';
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
