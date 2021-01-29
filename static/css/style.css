@@ -34,8 +34,8 @@
 	color: var(--light);
 }
 #main-sidebar .list-group .list-group-item-action.active{
-	color: #041b1f;
-	background-color: #68ebff;
+	color: #0b505b;
+	background-color: var(--light);
 	font-weight: bold;
 	border-color: rgba(0,0,0,0.125);
 	padding-left: 20px !important;
@@ -48,8 +48,9 @@
 	transition: 0.2s;
 }
 #main-sidebar .list-group .list-group-item:hover{
-	color: #041b1f;
-	background-color: #68ebff;
+	color: #0b505b;
+	background-color: var(--light);
+	font-weight: bold;
 	padding-left: 20px;
 	border-radius: 8px;
 }
