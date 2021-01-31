@@ -1,22 +1,22 @@
 {{define "main"}}
-	<div class="p-5">
-		<h1 class="single-post-title bg-info text-light py-4 px-3">{{.Title}}</h1>
+	<div class="p-md-5 py-5 px-4">
+		<h1 class="single-post-title font-weight-semibold ff-heading bg-info text-light py-4 px-3">{{.Title}}</h1>
 		<!-- Content Row -->
 		<div class="form-row mt-lg-5">
 			<!-- content -->
 			<div class="col-lg-9 order-lg-1 order-2">
-				<div class="bg-white border-left border-info shadow-sm p-4 mb-4 mt-lg-0 mt-4">
-					<p class="m-0"><span class="text-info text-uppercase font-weight-bold">Quick Summary <i class="fas fa-hand-point-right mr-1"></i></span> {{.Params.Description}}</p>
+				<div class="bg-white border-left border-info rounded-lg shadow-sm p-4 mb-4 mt-lg-0 mt-4">
+					<p class="m-0 text-secondary"><span class="text-info text-uppercase font-weight-bold">Quick Summary <i class="fas fa-hand-point-right mr-1"></i></span> {{.Params.Description}}</p>
 				</div>
 				{{.Content}}
 			</div>
 			<!-- Details about the post -->
 			<div class="col-lg-3 order-lg-2 order-1">
-				<div class="bg-lighter shadow-sm text-info border-left border-info p-3 mb-3">
+				<div class="bg-lighter rounded-lg shadow-sm text-info border-left border-info p-3 mb-3">
 					<!-- Authors -->
-					{{if .Params.Authors}}<p><i class="fas fa-user-circle mr-1"></i> {{ delimit .Params.Authors ", " }}</p>{{end}}
+					{{if .Params.Authors}}<p class="small font-weight-semibold"><i class="fas fa-user-circle mr-1"></i> {{ delimit .Params.Authors ", " }}</p>{{end}}
 					<!-- Date -->
-					{{if .Date}}<p><i class="fas fa-calendar-alt mr-1"></i> {{.Date.Format "Jan 2, 2006"}}</p>{{end}}
+					{{if .Date}}<p class="small font-weight-semibold"><i class="fas fa-calendar-alt mr-1"></i> {{.Date.Format "Jan 2, 2006"}}</p>{{end}}
 					<!-- Categories with Links -->
 					{{ with .Params.Categories }}
 					<p>
@@ -27,9 +27,9 @@
 					</p>
 					{{end}}
 				    <!-- Reading Time -->
-				    <p><i class="fas fa-stopwatch mr-1"></i> {{.ReadingTime}} min read</p>
+				    <p class="small font-weight-semibold"><i class="fas fa-stopwatch mr-1"></i> {{.ReadingTime}} min read</p>
 				    <!-- Comments Count -->
-				    <p class="m-0"><i class="fas fa-comments mr-1"></i> <a href="{{.URL}}#disqus_thread" class="text-info">Post a comment</a></p>
+				    <p class="m-0 small font-weight-semibold"><i class="fas fa-comments mr-1"></i> <a href="{{.URL}}#disqus_thread" class="text-info">Post a comment</a></p>
 			    </div>
 			    <!-- Previous & Next Post Template -->
 			    {{ with .NextInSection }}

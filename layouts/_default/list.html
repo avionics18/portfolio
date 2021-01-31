@@ -1,7 +1,21 @@
 {{define "main"}}
-	<div class="p-5">
-		<h1 class="font-weight-bold text-dark">{{.Title}}</h1>
-		<hr>
+	<div class="p-md-5 py-5 px-4">
+		<h1 class="ff-heading font-weight-bold text-info border-bottom border-info mb-3 pb-3">{{.Title}}</h1>
+		{{$inside_pages := (where .Site.RegularPages "Section" .Section)}}
+		{{$pages_count := len $inside_pages}}
+		{{if $pages_count}}
+		<div class="card shadow-sm mb-4">
+			<div class="card-header"><span class="text-muted"><b>CONTENTS</b></span></div>
+			<div class="card-body">
+				<ul class="m-0">
+					{{range (where .Site.RegularPages "Section" .Section)}}
+					<li><a href="{{.Permalink}}">{{.Title}}</a></li>
+					{{end}}
+				</ul>
+			</div>
+		</div>
+		<!-- .card -->
+		{{end}}
 		{{.Content}}
 	</div>	
 {{end}}

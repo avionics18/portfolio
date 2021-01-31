@@ -1,5 +1,9 @@
+/*Utilities*/
 .bg-lighter{
 	background-color: #ebebeb;
+}
+.ff-heading{
+	font-family: 'Fraunces', serif;	
 }
 .font-weight-semibold{
 	font-weight: 600;
@@ -62,7 +66,6 @@
 }
 #content-wrapper .single-post-title{
 	font-size: 3.5rem;
-    font-weight: 300;
     line-height: 1.2;
 }
 #content-wrapper .list-post-card{
@@ -123,7 +126,6 @@
 	}
 	#content-wrapper .single-post-title{
 		font-size: 2rem;
-		font-weight: 500;
 	}
 }
 
