@@ -1,5 +1,5 @@
 {{define "main"}}
-	<div class="p-md-5 py-5 px-4">
+	<div class="p-md-5 py-5 px-4" id="blog-single-page">
 		<h1 class="single-post-title font-weight-semibold ff-heading bg-info text-light py-4 px-3">{{.Title}}</h1>
 		<!-- Content Row -->
 		<div class="form-row mt-lg-5">
@@ -8,7 +8,9 @@
 				<div class="bg-white border-left border-info rounded-lg shadow-sm p-4 mb-4 mt-lg-0 mt-4">
 					<p class="m-0 text-secondary"><span class="text-info text-uppercase font-weight-bold">Quick Summary <i class="fas fa-hand-point-right mr-1"></i></span> {{.Params.Description}}</p>
 				</div>
-				{{.Content}}
+				<div class="single-post-body">
+					{{.Content}}
+				</div>
 			</div>
 			<!-- Details about the post -->
 			<div class="col-lg-3 order-lg-2 order-1">

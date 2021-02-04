@@ -1,5 +1,5 @@
 {{define "main"}}
-	<div class="p-md-5 py-5 px-4">
+	<div class="p-md-5 py-5 px-4" id="blog-list-page">
 		<h1 class="ff-heading font-weight-bold text-info border-bottom border-info mb-3 pb-3">{{.Title}}</h1>
 		<!-- Posts Row -->
 		<div class="row pt-4">
@@ -9,7 +9,7 @@
 					<div class="card border-0 rounded-lg list-post-card">
 						<div class="card-body">
 							<!-- Title -->
-							<h5><a href="{{.Permalink}}" class="font-weight-semibold text-info text-capitalize text-decoration-none">{{.Title}}</a></h5>
+							<h5><a href="{{.Permalink}}" class="ff-heading font-weight-semibold text-info text-capitalize text-decoration-none">{{.Title}}</a></h5>
 							<p class="small text-secondary border-bottom border-top py-2 mt-4">
 								<!-- Authors -->
 								{{if .Params.Authors}}<span class="mr-2"><i class="fas fa-user-circle"></i> {{ delimit .Params.Authors ", " }}</span>{{end}}
