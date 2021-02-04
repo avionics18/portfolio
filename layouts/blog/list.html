@@ -3,7 +3,7 @@
 		<h1 class="ff-heading font-weight-bold text-info border-bottom border-info mb-3 pb-3">{{.Title}}</h1>
 		<!-- Posts Row -->
 		<div class="row pt-4">
-			{{ $paginator := .Paginate .Pages 2 }}
+			{{ $paginator := .Paginate .Pages 4 }}
 			{{ range $paginator.Pages }}
 				<div class="col-lg-6 mb-3">
 					<div class="card border-0 rounded-lg list-post-card">

@@ -5,15 +5,18 @@ draft: false
 ---
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus recusandae beatae, asperiores placeat voluptatum, voluptatibus! Dolores at sequi totam aliquam, tempora maxime animi a, nemo minima tempore voluptate accusamus ducimus eum inventore, dolore. Nostrum suscipit neque magni quasi doloremque ipsa. Veritatis dicta sint fugiat molestiae totam molestias non placeat minus.
-#### Here We Used PRISM.JS
+
+#### Syntax Highlighting
 
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dolore, velit, aliquid. Maiores unde laboriosam nisi iusto, neque alias animi consequatur, quod suscipit perspiciatis eaque aut.
+> Hugo comes with really fast syntax highlighting from Chroma.
+
+Hugo uses Chroma as its code highlighter; it is built in Go and is really, really fast – and for the most important parts compatible with Pygments we used before.
 
 So, here it is:
 
-```js
+```js {linenos=true,linenostart=1}
 function activateMenu(){
 	var x = document.querySelector(".navbar > ul");	
 	var button = document.querySelector("#navbar-toggler");
@@ -24,4 +27,4 @@ function activateMenu(){
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quia corrupti tenetur vitae excepturi maxime, cupiditate, modi accusamus velit, officia, sed necessitatibus ea. Error fugit neque pariatur molestias facilis nesciunt iusto voluptas dicta asperiores dolor.
 
-Thank You! Hope It Helps <3
+Thank You! Hope It Helps ❤️.
