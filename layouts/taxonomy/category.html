@@ -6,7 +6,7 @@
 		<div class="row">
 		{{ range .Data.Pages }}
 			<div class="col-lg-2 mb-2 font-weight-bold text-muted text-uppercase">{{.Date.Format "Jan 2, 2006"}}</div>
-			<div class="col-lg-10 mb-2"><a href="{{.Permalink}}">{{.Title}}</a></div>
+			<div class="col-lg-10 mb-2"><a href="{{.Permalink}}" class="text-info">{{.Title}}</a></div>
 		{{ end }}
 		</div>
 	</div>

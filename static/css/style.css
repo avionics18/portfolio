@@ -64,6 +64,16 @@
 	height: 100vh;
 	overflow: auto;
 }
+/*Page Post Content*/
+#page-body h2,
+#page-body h3,
+#page-body h4,
+#page-body h5{
+	padding-top: 1.5rem;
+	font-family: 'Fraunces', serif;
+	font-weight: 600;
+}
+/*Blog Post Content*/
 #blog-single-page .single-post-title{
 	font-size: 3.5rem;
 	line-height: 1.2;
@@ -72,8 +82,17 @@
 #blog-single-page .single-post-body h3,
 #blog-single-page .single-post-body h4,
 #blog-single-page .single-post-body h5{
+	padding-top: 1.5rem;
 	font-weight: 600;
 	font-family: 'Fraunces', serif;
+}
+#blog-single-page img{
+	display: block;
+	max-width: 100%;
+	margin: auto;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	box-shadow: 0 0 0.5rem rgba(0,0,0,0.25); 
 }
 #blog-list-page .list-post-card{
 	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
